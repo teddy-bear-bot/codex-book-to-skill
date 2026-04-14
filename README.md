@@ -348,3 +348,14 @@ node src/cli.js uninstall pyramid-writing-skill@1.0.0 --store /tmp/book-to-skill
 - 校验必要文件
 - 复制技能包到本地 store
 - 写入 `registry.json`
+
+
+配置完成:
+
+-终端不启动cli，输入book-to-skill chat xxx.tar.gz文件。
+-显示>host（此时出现提示：输入：/skill）。
+-输入/skill后，显示Installed skills案例:
+  - jrx-default@0.1.0
+  - jysjfx-data@0.1.0
+  - jrx@0.0.4
+-显示host> （此时出现提示：输入：技能id，如jrx-default 或 id@version，如jrx-default@0.1.0）。
