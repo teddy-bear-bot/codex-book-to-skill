@@ -1,0 +1,15 @@
+{
+  "platform": "codex",
+  "kind": "skill-package",
+  "status": "planned",
+  "entrypoints": {
+    "system_prompt_file": "../system.md",
+    "inputs_schema_file": "../inputs.schema.json",
+    "skill_spec_file": "../spec.json"
+  },
+  "installation_behavior": {
+    "register_as_default": false,
+    "execution_mode": "codex-compatible-runtime"
+  },
+  "notes": "示例适配 manifest，表示该技能包未来可映射到 Codex 兼容 skill 安装器。"
+}

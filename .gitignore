@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+
+# Local generated outputs
+.superpowers/
+web-output/
+
+# Logs and temporary files
+*.log
+*.tmp

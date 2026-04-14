@@ -1,0 +1,211 @@
+{
+  "version": "1.0.0",
+  "id": "pyramid-writing-skill",
+  "title": "金字塔结构写作 Skill",
+  "summary": "将结构化表达方法封装为内容创作 Skill，帮助创作者在选题、提纲和正文组织时先结论后展开，保证论点清晰、层次分明。",
+  "target_user": "个人创作者、知识博主、需要高频输出结构化内容的写作者",
+  "goal": "帮助用户把模糊主题转化为结构清晰、论证有序、适合发布的内容框架和初稿。",
+  "source_book": {
+    "title": "金字塔原理",
+    "author": "Barbara Minto",
+    "language": "zh-CN",
+    "source_type": "pdf",
+    "rights_note": "仅蒸馏方法论，不公开分发原文。"
+  },
+  "applicable_scenarios": [
+    "公众号文章提纲设计",
+    "播客单集结构设计",
+    "短视频脚本结构化改写",
+    "长文观点整理",
+    "基于已有素材重组表达逻辑"
+  ],
+  "required_inputs": [
+    {
+      "name": "topic",
+      "description": "本次内容创作的主题或问题陈述。",
+      "required": true,
+      "type": "string",
+      "example": "为什么个人品牌需要先做定位再做内容"
+    },
+    {
+      "name": "audience",
+      "description": "目标读者或听众是谁。",
+      "required": true,
+      "type": "string",
+      "example": "正在做自媒体起号的知识型创作者"
+    },
+    {
+      "name": "goal",
+      "description": "本次输出希望达到的传播或表达目标。",
+      "required": true,
+      "type": "string",
+      "example": "让读者理解定位优先于盲目输出"
+    },
+    {
+      "name": "raw_material",
+      "description": "用户已有的观点、笔记、案例或素材。",
+      "required": false,
+      "type": "text",
+      "example": "很多人先开始写内容，再想自己是谁，导致内容方向长期摇摆。"
+    }
+  ],
+  "core_principles": [
+    {
+      "id": "conclusion-first",
+      "title": "先结论，后展开",
+      "description": "先明确核心论点，再组织支撑材料，避免边写边想导致结构混乱。",
+      "rationale": "读者更容易理解先给答案、再给解释的表达方式。",
+      "priority": 1
+    },
+    {
+      "id": "group-by-logic",
+      "title": "同类分组，逻辑递进",
+      "description": "把支撑点按同一维度分组，并保证组内平行、组间递进。",
+      "rationale": "分组和递进能降低读者理解成本。",
+      "priority": 2
+    },
+    {
+      "id": "from-question-to-structure",
+      "title": "从问题驱动结构",
+      "description": "围绕用户最关心的问题组织内容，而不是按素材堆砌。",
+      "rationale": "问题导向的结构更接近真实阅读路径。",
+      "priority": 3
+    }
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "title": "澄清主题与目标",
+      "instruction": "先用一句话重述主题、目标受众和输出目标，确保任务边界清楚。",
+      "when_to_apply": "收到任务后立即执行。",
+      "expected_output": "一条清晰的任务重述。"
+    },
+    {
+      "step": 2,
+      "title": "提出中心结论",
+      "instruction": "从主题中提炼一个最值得先说的中心结论，要求具体、可理解、可支撑。",
+      "when_to_apply": "开始搭建结构前。",
+      "expected_output": "一句核心结论。"
+    },
+    {
+      "step": 3,
+      "title": "拆分支撑论点",
+      "instruction": "围绕核心结论拆出 2 到 4 个主要支撑论点，避免交叉和重复。",
+      "when_to_apply": "已确定核心结论后。",
+      "expected_output": "分组后的支撑论点列表。"
+    },
+    {
+      "step": 4,
+      "title": "补充案例与解释",
+      "instruction": "为每个支撑论点补充解释、案例、对比或推理，提升可读性和说服力。",
+      "when_to_apply": "结构已稳定后。",
+      "expected_output": "每个论点对应的展开说明。"
+    },
+    {
+      "step": 5,
+      "title": "输出结构化成品",
+      "instruction": "按既定结构输出标题、提纲或正文，保持层级清晰和表达一致。",
+      "when_to_apply": "进入最终输出阶段。",
+      "expected_output": "可直接用于发布或继续编辑的结构化内容。"
+    }
+  ],
+  "decision_rules": [
+    {
+      "condition": "如果用户提供的主题过大或过泛",
+      "action": "先缩小问题范围，再继续输出结构。",
+      "reason": "过大的主题无法形成有力结论。"
+    },
+    {
+      "condition": "如果素材较少但目标明确",
+      "action": "优先给出结构和论点，再标出需要补充的案例位置。",
+      "reason": "先保住框架，再补证据。"
+    },
+    {
+      "condition": "如果用户已经有现成提纲",
+      "action": "先检查是否符合先结论后展开、组内平行、组间递进，再提出改写建议。",
+      "reason": "减少不必要重写。"
+    }
+  ],
+  "constraints": [
+    "不要复刻书中大段原文。",
+    "不要输出只有抽象口号、缺少支撑结构的内容。",
+    "不要把案例误当成总原则。",
+    "不要在没有依据时强行补充作者未表达的观点。"
+  ],
+  "anti_patterns": [
+    {
+      "name": "素材堆砌",
+      "description": "把用户给的所有素材平铺展开，没有提炼中心论点。"
+    },
+    {
+      "name": "结构失衡",
+      "description": "部分论点过于细碎，部分论点过于宏大，无法形成平行结构。"
+    },
+    {
+      "name": "先写后想",
+      "description": "直接进入长文输出，没有先建立结论和层级。"
+    }
+  ],
+  "output_format": {
+    "format": "结构化内容提纲",
+    "structure": [
+      "标题或主题重述",
+      "核心结论",
+      "一级论点列表",
+      "每个论点的展开说明",
+      "结尾总结或行动建议"
+    ],
+    "tone": "清晰、理性、适合知识型内容创作",
+    "style_notes": [
+      "先给出核心判断",
+      "避免无层级长段落",
+      "优先使用有逻辑关系的标题"
+    ]
+  },
+  "example_tasks": [
+    {
+      "title": "公众号提纲生成",
+      "input": "请围绕“为什么个人品牌需要先做定位再做内容”生成一篇公众号提纲。",
+      "expected_behavior": "先提出中心结论，再拆分 3 个支撑论点，并给出每个论点的展开方向。",
+      "example_output": "核心结论：定位决定内容方向，否则内容会长期发散。一级论点 1：定位决定受众识别；一级论点 2：定位决定表达边界；一级论点 3：定位决定内容积累效率。"
+    },
+    {
+      "title": "视频脚本重组",
+      "input": "我有一段关于定位的松散口播稿，请帮我重组结构。",
+      "expected_behavior": "识别现有素材中的隐含结论和支撑点，再按层级改写。",
+      "example_output": "先用一句话给出主张，再拆成问题、原因、建议三段。"
+    }
+  ],
+  "evaluation_checklist": [
+    "是否先明确给出核心结论。",
+    "一级论点是否平行且不重复。",
+    "每个论点是否有展开说明或例子支撑。",
+    "输出结构是否适合直接进入写作或改写。",
+    "是否避免了大段原文复刻。"
+  ],
+  "platform_adapters": [
+    {
+      "platform": "generic-markdown",
+      "format": "markdown",
+      "status": "stable",
+      "notes": "作为最基础的跨平台导出格式。"
+    },
+    {
+      "platform": "openai-compatible",
+      "format": "json-prompt-bundle",
+      "status": "planned",
+      "notes": "后续可导出为系统提示词与输入模板组合。"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-04-08T11:30:00Z",
+    "updated_at": "2026-04-08T11:30:00Z",
+    "created_by": "book-to-skill",
+    "tags": [
+      "writing",
+      "structure",
+      "content-creation"
+    ],
+    "visibility": "public"
+  }
+}

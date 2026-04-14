@@ -1,0 +1,18 @@
+{
+  "name": "book-to-skill-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Minimal prototype scaffold for Book-to-Skill export adapters.",
+  "bin": {
+    "book-to-skill": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "web": "node ./web/server.js",
+    "example": "sh ./scripts/demo.sh make",
+    "example:clean": "sh ./scripts/demo.sh clean",
+    "example:reset": "sh ./scripts/demo.sh reset",
+    "example:status": "sh ./scripts/demo.sh status",
+    "example:status:json": "sh ./scripts/demo.sh status --json"
+  }
+}

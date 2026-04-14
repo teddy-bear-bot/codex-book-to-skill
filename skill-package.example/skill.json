@@ -1,0 +1,40 @@
+{
+  "$schema": "../skill-package.schema.json",
+  "package_schema_version": "1.0.0",
+  "id": "pyramid-writing-skill",
+  "name": "金字塔结构写作 Skill",
+  "version": "1.0.0",
+  "description": "一个可安装的内容创作技能包，将结构化表达方法封装为本地可用 skill。",
+  "license": "Apache-2.0",
+  "source_repository": "https://github.com/example/pyramid-writing-skill",
+  "skill_spec_file": "spec.json",
+  "readme_file": "README.md",
+  "entrypoints": {
+    "system_prompt_file": "system.md",
+    "inputs_schema_file": "inputs.schema.json"
+  },
+  "installation": {
+    "mode": "copy",
+    "default_install_root": "~/.book-to-skill/skills",
+    "install_subdir_pattern": "{id}@{version}"
+  },
+  "adapters": [
+    {
+      "platform": "generic",
+      "manifest_file": "adapters/generic.json",
+      "default": true
+    },
+    {
+      "platform": "codex",
+      "manifest_file": "adapters/codex.json",
+      "default": false
+    }
+  ],
+  "compatibility": {
+    "book_to_skill_cli": ">=0.1.0",
+    "runtimes": [
+      "generic-prompt-runtime",
+      "codex-compatible-runtime"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "book_title": "Atomic Habits",
+  "author": "James Clear",
+  "topic": "habit-design",
+  "target_user": "希望把习惯设计方法落地到真实任务中的个人创作者",
+  "scenarios": [
+    "设计一套新的写作习惯",
+    "优化已有的学习流程",
+    "把抽象习惯原则转换为每日执行动作"
+  ],
+  "inputs": [
+    {
+      "name": "goal",
+      "description": "这次想建立或优化的具体习惯目标。",
+      "required": true,
+      "type": "string",
+      "example": "建立每天 30 分钟写作习惯"
+    },
+    {
+      "name": "current_context",
+      "description": "当前环境、阻力和已有习惯线索。",
+      "required": false,
+      "type": "text",
+      "example": "下班后精力有限，经常被手机分散注意力。"
+    },
+    {
+      "name": "time_budget",
+      "description": "每天可以稳定投入的时间。",
+      "required": false,
+      "type": "string",
+      "example": "25 分钟"
+    }
+  ],
+  "fragments": [
+    {
+      "type": "summary",
+      "title": "身份先于结果",
+      "chapter": "Chapter 1",
+      "importance": 5,
+      "content": "先定义你想成为怎样的人，再让每个小习惯为这个身份投票。"
+    },
+    {
+      "type": "summary",
+      "title": "让好习惯显而易见",
+      "chapter": "Chapter 4",
+      "importance": 4,
+      "content": "通过环境设计强化提示，让正确行动更容易被看见和触发。"
+    },
+    {
+      "type": "summary",
+      "title": "从微小动作开始",
+      "chapter": "Chapter 13",
+      "importance": 4,
+      "content": "把新习惯压缩到两分钟就能开始的规模，先建立启动动作，再逐步扩大。"
+    },
+    {
+      "type": "excerpt",
+      "title": "四步行为循环",
+      "source_pages": "43-48",
+      "importance": 3,
+      "content": "行为改变通常经历提示、渴望、反应、奖励四个环节。"
+    }
+  ]
+}

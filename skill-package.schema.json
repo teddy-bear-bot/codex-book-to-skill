@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://book-to-skill.dev/schemas/skill-package.schema.json",
+  "title": "Book-to-Skill Package Manifest",
+  "description": "Declarative manifest for a git-distributed, locally installable skill package.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "package_schema_version",
+    "id",
+    "name",
+    "version",
+    "description",
+    "skill_spec_file",
+    "entrypoints",
+    "installation",
+    "adapters"
+  ],
+  "properties": {
+    "package_schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "license": {
+      "type": "string"
+    },
+    "source_repository": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "skill_spec_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "readme_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entrypoints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system_prompt_file",
+        "inputs_schema_file"
+      ],
+      "properties": {
+        "system_prompt_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs_schema_file": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "installation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "default_install_root",
+        "install_subdir_pattern"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "copy"
+          ]
+        },
+        "default_install_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "install_subdir_pattern": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "adapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "platform",
+          "manifest_file",
+          "default"
+        ],
+        "properties": {
+          "platform": {
+            "type": "string",
+            "minLength": 1
+          },
+          "manifest_file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "default": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "book_to_skill_cli": {
+          "type": "string"
+        },
+        "runtimes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    }
+  }
+}

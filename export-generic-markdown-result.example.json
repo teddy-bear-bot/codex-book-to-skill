@@ -1,0 +1,32 @@
+{
+  "adapter": "generic-markdown",
+  "status": "ok",
+  "artifacts": [
+    {
+      "path": "exports/pyramid-writing-skill.md",
+      "media_type": "text/markdown",
+      "encoding": "utf-8",
+      "content": "# 金字塔结构写作 Skill\n\n## 概览\n\n将结构化表达方法封装为内容创作 Skill，帮助创作者在选题、提纲和正文组织时先结论后展开，保证论点清晰、层次分明。\n\n- Skill ID: `pyramid-writing-skill`\n- Version: `1.0.0`\n- Target User: 个人创作者、知识博主、需要高频输出结构化内容的写作者\n- Goal: 帮助用户把模糊主题转化为结构清晰、论证有序、适合发布的内容框架和初稿\n\n## 来源\n\n- Source Book: 《金字塔原理》\n- Author: Barbara Minto\n- Source Type: PDF\n- Rights Note: 仅蒸馏方法论，不公开分发原文\n\n## 适用场景\n\n- 公众号文章提纲设计\n- 播客单集结构设计\n- 短视频脚本结构化改写\n- 长文观点整理\n- 基于已有素材重组表达逻辑\n\n## 必要输入\n\n### `topic`\n\n- Required: Yes\n- Type: `string`\n- Description: 本次内容创作的主题或问题陈述\n- Example: 为什么个人品牌需要先做定位再做内容\n\n### `audience`\n\n- Required: Yes\n- Type: `string`\n- Description: 目标读者或听众是谁\n- Example: 正在做自媒体起号的知识型创作者\n\n### `goal`\n\n- Required: Yes\n- Type: `string`\n- Description: 本次输出希望达到的传播或表达目标\n- Example: 让读者理解定位优先于盲目输出\n\n### `raw_material`\n\n- Required: No\n- Type: `text`\n- Description: 用户已有的观点、笔记、案例或素材\n- Example: 很多人先开始写内容，再想自己是谁，导致内容方向长期摇摆。\n\n## 核心原则\n\n### 1. 先结论，后展开\n\n先明确核心论点，再组织支撑材料，避免边写边想导致结构混乱。\n\n理由：读者更容易理解先给答案、再给解释的表达方式。\n\n### 2. 同类分组，逻辑递进\n\n把支撑点按同一维度分组，并保证组内平行、组间递进。\n\n理由：分组和递进能降低读者理解成本。\n\n### 3. 从问题驱动结构\n\n围绕用户最关心的问题组织内容，而不是按素材堆砌。\n\n理由：问题导向的结构更接近真实阅读路径。\n\n## 工作流\n\n### Step 1. 澄清主题与目标\n\n- Instruction: 先用一句话重述主题、目标受众和输出目标，确保任务边界清楚\n- When to Apply: 收到任务后立即执行\n- Expected Output: 一条清晰的任务重述\n\n### Step 2. 提出中心结论\n\n- Instruction: 从主题中提炼一个最值得先说的中心结论，要求具体、可理解、可支撑\n- When to Apply: 开始搭建结构前\n- Expected Output: 一句核心结论\n\n### Step 3. 拆分支撑论点\n\n- Instruction: 围绕核心结论拆出 2 到 4 个主要支撑论点，避免交叉和重复\n- When to Apply: 已确定核心结论后\n- Expected Output: 分组后的支撑论点列表\n\n### Step 4. 补充案例与解释\n\n- Instruction: 为每个支撑论点补充解释、案例、对比或推理，提升可读性和说服力\n- When to Apply: 结构已稳定后\n- Expected Output: 每个论点对应的展开说明\n\n### Step 5. 输出结构化成品\n\n- Instruction: 按既定结构输出标题、提纲或正文，保持层级清晰和表达一致\n- When to Apply: 进入最终输出阶段\n- Expected Output: 可直接用于发布或继续编辑的结构化内容\n\n## 决策规则\n\n- 如果用户提供的主题过大或过泛：先缩小问题范围，再继续输出结构\n  Reason: 过大的主题无法形成有力结论\n\n- 如果素材较少但目标明确：优先给出结构和论点，再标出需要补充的案例位置\n  Reason: 先保住框架，再补证据\n\n- 如果用户已经有现成提纲：先检查是否符合先结论后展开、组内平行、组间递进，再提出改写建议\n  Reason: 减少不必要重写\n\n## 约束\n\n- 不要复刻书中大段原文\n- 不要输出只有抽象口号、缺少支撑结构的内容\n- 不要把案例误当成总原则\n- 不要在没有依据时强行补充作者未表达的观点\n\n## 反模式\n\n- 素材堆砌：把用户给的所有素材平铺展开，没有提炼中心论点\n- 结构失衡：部分论点过于细碎，部分论点过于宏大，无法形成平行结构\n- 先写后想：直接进入长文输出，没有先建立结论和层级\n\n## 输出格式\n\n- Format: 结构化内容提纲\n- Tone: 清晰、理性、适合知识型内容创作\n\n### Output Structure\n\n1. 标题或主题重述\n2. 核心结论\n3. 一级论点列表\n4. 每个论点的展开说明\n5. 结尾总结或行动建议\n\n### Style Notes\n\n- 先给出核心判断\n- 避免无层级长段落\n- 优先使用有逻辑关系的标题\n\n## 示例任务\n\n### 公众号提纲生成\n\n- Input: 请围绕“为什么个人品牌需要先做定位再做内容”生成一篇公众号提纲\n- Expected Behavior: 先提出中心结论，再拆分 3 个支撑论点，并给出每个论点的展开方向\n- Example Output: 核心结论：定位决定内容方向，否则内容会长期发散。一级论点 1：定位决定受众识别；一级论点 2：定位决定表达边界；一级论点 3：定位决定内容积累效率。\n\n### 视频脚本重组\n\n- Input: 我有一段关于定位的松散口播稿，请帮我重组结构\n- Expected Behavior: 识别现有素材中的隐含结论和支撑点，再按层级改写\n- Example Output: 先用一句话给出主张，再拆成问题、原因、建议三段。\n\n## 评估清单\n\n- 是否先明确给出核心结论\n- 一级论点是否平行且不重复\n- 每个论点是否有展开说明或例子支撑\n- 输出结构是否适合直接进入写作或改写\n- 是否避免了大段原文复刻\n\n## 导出元数据\n\n- Adapter: `generic-markdown`\n- Format: `markdown`\n- Status: `stable`\n- Visibility: `public`\n- Created By: `book-to-skill`\n- Tags: `writing`, `structure`, `content-creation`\n"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "metadata-partial-render",
+      "message": "Metadata was partially rendered into the markdown artifact instead of being preserved as a standalone structured block."
+    }
+  ],
+  "losses": [
+    {
+      "field": "platform_adapters",
+      "reason": "Platform adapter definitions were not expanded in the markdown artifact and were reduced to export metadata context only."
+    },
+    {
+      "field": "metadata.created_at",
+      "reason": "Timestamp fields were omitted from the human-readable markdown export to keep the document concise."
+    },
+    {
+      "field": "metadata.updated_at",
+      "reason": "Timestamp fields were omitted from the human-readable markdown export to keep the document concise."
+    }
+  ]
+}

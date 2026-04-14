@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book-to-Skill Web</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <h1>Book-to-Skill Web</h1>
+        <p>上传文档，蒸馏 Skill Spec，封装并下载本地 skill 包。</p>
+      </header>
+
+      <main class="layout">
+        <section class="panel">
+          <h2>输入</h2>
+          <form id="distill-form">
+            <label class="field">
+              <span>上传文档</span>
+              <input
+                id="document-file"
+                type="file"
+                accept=".pdf,.epub,.doc,.docx,.txt,.md,.markdown,application/pdf,application/epub+zip,.doc,.docx,text/plain,text/markdown"
+              />
+            </label>
+
+            <label class="field">
+              <span>技能名称 / 主题（可选）</span>
+              <input id="skill-name-input" type="text" placeholder="默认取文件名，可填 jrx-default" />
+            </label>
+
+            <label class="field">
+              <span>版本号</span>
+              <input id="package-version-input" type="text" value="0.0.1" placeholder="0.0.1" />
+            </label>
+
+            <div class="actions">
+              <button type="submit" id="distill-button">蒸馏 Skill Spec</button>
+            </div>
+          </form>
+
+          <label class="field">
+            <span>或直接编辑 Distill Input JSON</span>
+            <textarea id="distill-input-editor" rows="18"></textarea>
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>输出</h2>
+          <div class="actions output-actions">
+            <button type="button" id="package-button" disabled>封装 Skill</button>
+            <a
+              id="download-link"
+              class="download-link disabled"
+              href="#"
+              download
+              aria-disabled="true"
+              tabindex="-1"
+              >下载 .tar.gz</a
+            >
+          </div>
+
+          <div id="status-box" class="status-box" role="status" aria-live="polite" aria-atomic="true">
+            等待输入…
+          </div>
+          <div
+            id="warnings-box"
+            class="warnings-box"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          ></div>
+
+          <section id="chapter-outline-panel" class="chapter-outline-panel">
+            <h3>章节结构</h3>
+            <div id="chapter-stats" class="chapter-stats">
+              <span>章节数：<strong id="chapter-count">-</strong></span>
+              <span>层级深度：<strong id="chapter-depth">-</strong></span>
+            </div>
+            <div id="chapter-tree" class="chapter-tree">暂无章节结构</div>
+          </section>
+
+          <label class="field">
+            <span>Skill Spec 预览</span>
+            <textarea id="spec-output" rows="20" readonly></textarea>
+          </label>
+
+          <label class="field">
+            <span>打包结果</span>
+            <textarea id="package-output" rows="10" readonly></textarea>
+          </label>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

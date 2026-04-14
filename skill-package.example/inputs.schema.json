@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pyramid Writing Skill Inputs",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "topic",
+    "audience",
+    "goal"
+  ],
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "description": "本次内容创作的主题或问题陈述。"
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1,
+      "description": "目标读者或听众是谁。"
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "description": "本次输出希望达到的传播或表达目标。"
+    },
+    "raw_material": {
+      "type": "string",
+      "description": "用户已有的观点、笔记、案例或素材。"
+    }
+  }
+}

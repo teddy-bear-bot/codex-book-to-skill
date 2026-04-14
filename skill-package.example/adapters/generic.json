@@ -1,0 +1,14 @@
+{
+  "platform": "generic",
+  "kind": "prompt-runtime",
+  "status": "stable",
+  "entrypoints": {
+    "system_prompt_file": "../system.md",
+    "inputs_schema_file": "../inputs.schema.json",
+    "skill_spec_file": "../spec.json"
+  },
+  "installation_behavior": {
+    "register_as_default": true,
+    "execution_mode": "local-runtime"
+  }
+}
