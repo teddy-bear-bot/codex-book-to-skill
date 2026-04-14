@@ -36,6 +36,19 @@ function sendError(response, statusCode, message) {
 }
 
 async function readJsonRequest(request) {
+  if (request.body !== undefined) {
+    if (typeof request.body === 'string') {
+      return request.body.trim() ? JSON.parse(request.body) : {};
+    }
+    if (Buffer.isBuffer(request.body)) {
+      const rawBody = request.body.toString('utf8');
+      return rawBody.trim() ? JSON.parse(rawBody) : {};
+    }
+    if (typeof request.body === 'object' && request.body !== null) {
+      return request.body;
+    }
+  }
+
   const chunks = [];
   for await (const chunk of request) {
     chunks.push(chunk);

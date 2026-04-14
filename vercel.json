@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "web/public",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index?bts_path=/api/:path*"
+    },
+    {
+      "source": "/downloads/:path*",
+      "destination": "/api/index?bts_path=/downloads/:path*"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{web/public/**,distill-input.example.json}"
+    }
+  }
+}
